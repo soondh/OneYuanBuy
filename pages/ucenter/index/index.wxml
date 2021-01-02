@@ -1,0 +1,63 @@
+<view class="container">
+  <view class="profile-info">
+    <image bindtap="onUserInfoClick" class="avatarUrl" src="{{userInfo.avatarUrl}}"></image>
+    <view class="info">
+      <text class='name' bindtap='onUserInfoClick'>{{ userInfo.nickName || '点击登录' }}</text>
+      <!-- <text class='level' bindtap='onUserInfoClick'></text> -->
+    </view>
+    <!--image bindtap="onLogoutClick" class='btn' src='/static/images/address_right.png'></image-->
+  </view>
+
+  <view class="allorder" bindtap="checkAllOrder">
+    <view class="myorder">我的订单</view>
+    <view class="checkorder">查看全部订单</view>
+    <image class='goallorder' src='/static/images/address_right.png'></image>
+  </view>
+  
+  <view class="mainorder">
+    <view class="daifukuan" bindtap='orderdaifukuan'>
+      <image class='fukuanimg' src='/static/images/daifukuan.png' mode="aspectFill"></image>
+      <text class="fukuantext">代付款</text>
+    </view>
+    <view class="daifahuo">
+      <image class='fukuanimg' src='/static/images/daifahuo.png' mode="aspectFill"></image>
+      <text class="fukuantext">代发货</text>
+    </view>
+    <view class="daishouhuo">
+      <image class='fukuanimg' src='/static/images/daishouhuo.png' mode="aspectFill"></image>
+      <text class="fukuantext">代收货</text>
+    </view>
+  </view>
+
+  <view class="myaddress">
+    <navigator url="../address/address" class="a">
+      <view class="addresstxt">我的收货地址</view>
+      <image class='goaddress' src='/static/images/address_right.png'></image>
+    </navigator>
+  </view>
+  <!-- <view class="logout" bindtap="exitLogin">退出登录</view> -->
+
+  <view class="introduction">
+    <navigator url="../address/address" class="i">
+      <view class="introductiontxt">平台介绍</view>
+      <image class='gointroduction' src='/static/images/address_right.png'></image>
+    </navigator>
+  </view>
+
+  <view class="kefu">
+    <view class="call">
+      <view class="lianxikefu">联系我们</view>
+      <image class='lianxiwomen' src='/static/images/address_right.png'></image>
+    </view>
+  </view>
+
+  </view>
+
+<view class='dialog-login' wx:if="{{showLoginDialog}}" bindtap='onCloseLoginDialog'>
+  <view class='dialog-body' catchtap='onDialogBody'>
+    <view class='title'>请选择登录方式</view>
+    <view class='content'>
+      <button type="primary" open-type="getUserInfo" bindgetuserinfo="onWechatLogin">微信登录</button>
+    </view>
+  </view>
+</view>

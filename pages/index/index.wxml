@@ -1,0 +1,52 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="bannercontainer">
+  <swiper class="banner" indicator-dots="true" autoplay="true" interval="5000" duration="1000" circular="true">
+    <swiper-item wx:for="{{banner}}" wx:key="{{item.id}}">
+      <navigator url="{{item.link}}">
+        <image src="{{item.url}}" background-size="cover"></image>
+      </navigator>
+    </swiper-item>
+  </swiper>
+  </view>
+
+  <view class="cate-nav">
+    <scroll-view scroll-x="true" class="cate-nav-body" style="width: 750rpx;" scroll-left="{{scrollLeft}}">
+      <view  wx:for="{{category}}" wx:key="category" class="item {{ id == item.id ? 'active' : ''}}" data-id="{{item.id}}" data-index="{{index}}" bindtap="switchCate">
+        <view class="cate-icon">
+          <image class="imgselected" src="{{item.selected}}" wx:if="{{item.id == id}}"></image>
+          <image class="imgselected" src="{{item.unselected}}" wx:if="{{item.id!=id}}"></image>
+        </view>
+        <view class="namecontainer">
+          <view class="name">{{item.name}}</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+      
+  <view class="cate-item">
+    <view class="b">
+      <navigator class="item {{(iindex + 1) % 2 == 0 ? 'item-b' : ''}}"   url="/pages/goods/goods?id={{iitem.id}}&name={{iitem.name}}" wx:for="{{currentCategoryData}}" wx:key="currentCategoryData" wx:for-item="iitem" wx:for-index="iindex" >
+       <view class="imgView">
+        <image class="img" src="{{iitem.pic[0].url}}" background-size="cover" mode="scaleToFill"></image>
+       </view>
+        <text class="name">{{iitem.name}}</text>
+        <text class="desc">{{iitem.caption}}</text>
+        <view class="priceNsold">
+          <text class="price">￥{{iitem.price}}</text>
+          <text class="sold">已售{{iitem.saleShow}}</text>
+        </view>
+      </navigator>
+    </view>
+  </view>
+
+
+  <view class="modal-box" hidden="{{!popshow}}" bindtap="hidemodalbox">
+    <view class="modal-content">
+      <image class='popimg' src="{{popimgUrl}}" mode='aspectFill' />
+    </view>
+    <view class='closebtn' catchtap="closemodalbox">
+      <image class='closebtnimg' src='https://yiyuangou168.oss-cn-hangzhou.aliyuncs.com/%E5%85%B3%E9%97%AD%402x.png' mode='aspectFill'></image>
+    </view>
+  </view>
+</view>

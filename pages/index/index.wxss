@@ -1,0 +1,206 @@
+page{
+  background: #f2f2f2;
+}
+.bannercontainer{
+  overflow: hidden;
+  margin-top: 23rpx;
+}
+
+.banner {
+  margin:auto auto;
+  width: 700.5rpx;
+  height: 339rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+
+.banner image {
+  width: 100%;
+  height: 339rpx;
+  border-radius: 10px;
+}
+
+.cate-nav{
+  z-index: 2;
+  height: 130rpx;
+  margin-top: 20rpx;
+  margin-left: 25rpx;
+  margin-right: 25rpx;
+  display: flex;
+  align-items: center;
+}
+
+.cate-nav-body{
+  height: 126rpx;
+  white-space: nowrap;   
+  background: rgba(0,0,0,);
+  overflow: hidden;
+}
+
+.cate-nav .item{
+  display: inline-block;
+  height: 126rpx;
+  min-width: 88rpx;
+  margin-right: 84rpx;
+}
+
+.cate-nav .item .cate-icon{
+  width: 80rpx;
+  height: 80rpx;
+  margin: auto auto;
+  display: block;
+}
+
+
+.cate-nav .item .cate-icon .imgselected{
+  width: 80rpx;
+  height: 80rpx;
+}
+
+
+.cate-nav .item .namecontainer{
+  margin-top: 10rpx;
+  width: 88rpx;
+  height: 28rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cate-nav .item .name{
+  display: flex;
+  width: 55rpx;
+  height: 28rpx;
+  font-size: 27rpx;
+  line-height: 1;
+  text-align: center;
+  color: #333;
+  overflow: hidden;
+}
+
+.cate-nav .item.active .name{
+  color: #FF5D69;
+}
+
+
+.cate-item{
+    height: auto;
+    overflow: hidden;
+}
+
+.cate-item .b{
+  width: 750rpx;
+  padding: 0 10rpx;
+  height: auto;
+  overflow: hidden;
+}
+
+.cate-item .b .item{
+  border-radius: 10px;
+  float: left;
+  background: #fff;
+  width: 345rpx;
+  margin: 8rpx 9.66rpx;
+  padding-bottom: 20rpx;
+  height: 439rpx;
+  overflow: hidden;
+  align-items: center;
+  box-shadow:0 3rpx 5rpx 1rpx #dcdcdc;
+}
+
+.cate-item .b .item-b{
+  margin-left: 6.25rpx;
+}
+
+.cate-item .item .imgView{
+  display: flex;
+  justify-content: center;
+}
+
+.cate-item .item .imgView .img{
+  display: flex;
+  justify-content: center;
+  margin-top: 26rpx;
+  width: 292rpx;
+  height: 249rpx;
+}
+
+.cate-item .item .name{
+  display: block;
+  width: 300rpx;
+  height: 35rpx;
+  margin: 11.5rpx 0 5rpx 0;
+  text-align: left;
+  overflow: hidden;
+  padding: 0 20rpx;
+  font-size: 30rpx;
+  color: #333;
+}
+
+.cate-item .item .desc{
+  display: block;
+  width: 365.625rpx;
+  height: 58rpx;
+  margin: 0;
+  text-align: left;
+  overflow: hidden;
+  padding: 0 20rpx;
+  font-size: 20rpx;
+  word-wrap: break-word;
+  color: #a9a9a9;
+}
+
+
+.cate-item .item .priceNsold{
+  display: flex;
+  justify-content: space-between;
+}
+
+.cate-item .item .priceNsold .price{
+  flex: 1;
+  align-items: center;
+  width: 150rpx;
+  height: 30rpx;
+  margin: 5rpx 1rpx 5rpx 11rpx;
+  text-align: left;
+  font-size: 30rpx;
+  color: #b4282d;
+}
+
+.cate-item .item .priceNsold .sold{
+  position: right;
+  align-items: right;
+  width: 150rpx;
+  height: 30rpx;
+  margin: 5rpx 11rpx 5rpx 1rpx;
+  text-align: right;
+  font-size: 25rpx;
+  color: #a9a9a9;
+}
+
+
+.modal-box {
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+  position: fixed;
+  top: 0rpx;
+  background:rgba(0,0,0,0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-box .closebtn{
+  display: flex;
+  align-content: center;
+  width: 50rpx;
+  height: 50rpx;
+
+}
+
+.modal-box .closebtn .closebtnimg{
+  width: 50rpx;
+  height: 50rpx;
+}

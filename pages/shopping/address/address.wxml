@@ -1,0 +1,26 @@
+<view class="container">
+    <view class="address-list" wx:if="{{ addressList.length > 0 }}">
+        <view class="item" wx:for="{{addressList}}" wx:key="{{item.id}}" bindtap="selectAddress" data-address="{{item}}">
+            <view class="infobox">
+                <view class="namebox">
+                    <view class="name">{{item.name}} {{item.phone}}</view>
+                </view>
+                <view class="addressbox">
+                    <view class="address">
+                        <text class="isdefault "wx:if="{{item.isDefault}}" style="color:#b4282d">[默认]  </text>
+                        <text class="content">{{item.fullRegion + item.content}}</text>
+                    </view>
+                </view>
+            </view>
+            
+            <view class="r" catchtap="addressUpdate" data-address="{{item}}">
+                <view class="edit" style="background-image:url(/static/images/addressEdit.png);background-size:100% 100%">编辑</view>
+            </view>
+        </view>
+    </view>
+    <view class="empty-view" wx:if="{{ addressList.length <= 0 }}">
+      <image class="icon" src="http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/noAddress-26d570cefa.png"></image>
+      <text class="text">收货地址在哪里</text>
+    </view>
+    <view class="add-address" bindtap="addressAdd" data-address-id="0">新建</view>
+</view>

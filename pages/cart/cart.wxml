@@ -1,0 +1,52 @@
+<view class="container">
+  <view class="no-cart" wx:if="{{cartGoods.length <= 0}}">
+    <view class="c">
+      <image src="http://q0n4s6rmz.bkt.clouddn.com/2019120722221575728548emptycart" />
+      <text>去添加点什么吧</text>
+    </view>
+  </view>
+  <view class="cart-view" wx:if="{{cartGoods.length > 0}}">
+    <view class="list">
+      <view class="group-item">
+        <view class="goods">
+          <view class="item" wx:for="{{cartGoods}}" wx:key="{{item.id}}">
+            <view class="checkbox {{item.selected ? 'checked' : ''}}" bindtap="checkedItem" data-item-index="{{index}}"></view>
+            <view class="cart-goods">
+              <image class="img" src="{{item.pic[0].url}}"></image>
+              <view class="info">
+                <view class="t">
+                  <text class="name">{{item.name}}</text>
+                </view>
+                <view class="b">
+                  <text class="price">￥{{item.price}}</text>
+                  <view class="selnum">
+                    <view class="cut" bindtap="cutNumber" data-item-index="{{index}}">-</view>
+                    <input value="{{item.count}}" class="number" type="number" maxlength="2" bindinput="watchgooscount" disabled="{{true}}"/>
+                    <view class="add" bindtap="addNumber" data-item-index="{{index}}">+</view>
+                  </view>
+                </view>
+                <view class="tips">
+                  <view class="youhui" catchtap="poptips">一元购</view>
+                  <view class="intro" catchtap="poptips"></view>
+                  <view class="deletePic" bindtap="deleteCartItem" data-item-index="{{index}}"></view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+
+    </view>
+    <view class="cart-bottom">
+      <view class="checkbox {{checkedAllStatus ? 'checked' : ''}}" bindtap="checkedAll">全选</view>
+      <view class="total">
+        <view class="totalprice">
+          <text class="tprice" style="color:#FF5D69;font-weight:700">¥{{cartTotal.selectedgoodsAmount}}</text>
+          <text class="heji">总计: </text>
+        </view>
+        <view class="yunfei" style="color:#a9a9a9;font-weight:300;font-size:20rpx">运费:免运费</view>
+      </view>
+      <view class="checkout" bindtap="checkoutOrder" style="background:{{bgColor}};color:{{textColor}}">下单</view>
+    </view>
+  </view>
+</view>

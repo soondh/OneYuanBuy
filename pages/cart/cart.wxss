@@ -1,0 +1,359 @@
+page{
+    height: 100%;
+    min-height: 100%;
+    background: #f4f4f4;
+}
+.container{
+    background: #f4f4f4;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+.no-cart{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.no-cart .c{
+    width: 100%;
+    height: auto;
+    margin-top: 200rpx;
+}
+
+.no-cart .c image{
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    width: 258rpx;
+    height: 258rpx;
+}
+
+.no-cart .c text{
+    margin: 0 auto;
+    display: block;
+    width: 258rpx;
+    height: 29rpx;
+    line-height: 29rpx;
+    text-align: center;
+    font-size: 29rpx;
+    color: #999;
+}
+
+
+.cart-view{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    
+}
+
+.cart-view .list{
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 120rpx;
+}
+
+.cart-view .group-item{
+    height: auto;
+    width: 100%;
+    background: #fff;
+    margin-bottom: 18rpx;
+}
+
+.cart-view .item{
+    height: 255rpx;
+    width: 100%;
+    overflow: hidden;
+}
+.cart-view .item .checkbox{
+    float: left;
+    height: 34rpx;
+    width: 34rpx;
+    margin: 110rpx 18rpx 110rpx 26rpx;
+    background: url("https://wechatyiyuan.oss-cn-hangzhou.aliyuncs.com/%E9%80%89%E4%B8%AD%E6%97%A0%402x.png") no-repeat;
+    background-size: 34rpx;
+}
+
+.cart-view .item .checkbox.checked{
+    background: url("https://wechatyiyuan.oss-cn-hangzhou.aliyuncs.com/%E9%80%89%E4%B8%AD%402x.png") no-repeat;
+    background-size: 34rpx;
+}
+
+.cart-view .item .cart-goods{
+    float: left;
+    height: 255rpx;
+    width: 672rpx;
+    border-bottom: 1px solid #f4f4f4;
+}
+
+.cart-view .item .img{
+    float: left;
+    height:181rpx;
+    width: 181rpx;
+    background: #f4f4f4;
+    margin: 37rpx 18rpx 37rpx 0;
+}
+
+.cart-view .item .info{
+    float: left;
+    height:100%;
+    width: 445rpx;
+    margin: 19.5rpx 26rpx 19.5rpx 0;
+}
+
+.cart-view .item .t{
+    margin: 8rpx 0;
+    height: 58rpx;
+    font-size: 25rpx;
+    color: #333;
+    overflow: hidden;
+}
+
+
+.cart-view .item .name{
+    height: 60rpx;
+    max-width: 440rpx;
+    line-height: 28rpx;
+    font-size: 24rpx;
+    color: #333;
+    overflow: hidden;
+    font-family: STXihei;
+    position: absolute;
+    text-overflow:ellipsis;
+    word-wrap:break-word
+}
+
+
+
+.cart-view .item .b{
+    display: flex;
+    height: 48rpx;
+    overflow: hidden;
+    
+}
+
+.cart-view .item .price{
+    line-height: 52rpx;
+    height: 52rpx;
+    flex: 1;
+    float: left;
+    font-weight: 700;
+    color: #FF5D69;
+    font-family: STXihei;
+}
+
+.cart-view .item .selnum{
+    width: 140rpx;
+    height: 100%;
+    line-height: 40rpx;
+    border: 1rpx solid #ccc;
+    display: flex;
+    text-align: center;
+    margin: auto;
+}
+
+.selnum .cut{
+    display: flex;
+    width: 40rpx;
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;  
+    line-height: 38rpx;
+    margin: auto;
+}
+
+.selnum .number{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    height: 100%;
+    min-height: 1.0rem;
+    line-height: 100%;
+    border-left: 1rpx solid #ccc;
+    border-right: 1rpx solid #ccc;
+    float: left;
+    font-family: SimHei;
+    font-size: 24rpx;
+    margin: auto;
+}
+
+.selnum .add{
+    display: flex;
+    width: 40rpx;
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center; 
+    line-height: 38rpx;
+    margin: auto;
+}
+
+.cart-view .item .tips{
+    display: flex;
+    height: 48rpx;
+    overflow: hidden;
+    margin-top: 30rpx;
+}
+
+.cart-view .item .youhui{
+    line-height: 48rpx;
+    width: 150rpx;
+    height: 52rpx;
+    float: left;
+    font-weight: 700;
+    color: #d9d9d9;
+    background: url("https://wechatyiyuan.oss-cn-hangzhou.aliyuncs.com/%E5%9C%86%E8%A7%92%E7%9F%A9%E5%BD%A24%E6%8B%B7%E8%B4%9D3%402x.png") round;
+    background-size: 150rxp 52rpx;
+    padding-left: 20rpx
+    
+}
+
+.cart-view .item .intro{
+    line-height: 52rpx;
+    width: 52rpx;
+    height: 52rpx;
+    float: left;
+    font-weight: 700;
+    background: url("https://wechatyiyuan.oss-cn-hangzhou.aliyuncs.com/-%402x.png") no-repeat;
+    background-size: 34rpx;
+    margin-top: 7rpx;
+    margin-left: 20rpx;
+}
+
+.cart-view .item .deletePic{
+    width: 40rpx;
+    height: 40rpx;
+    float: right;
+    display: flex;
+    margin-left: 180rpx;
+    margin-top: 5rpx;
+    background: url("https://wechatyiyuan.oss-cn-hangzhou.aliyuncs.com/%E5%9E%83%E5%9C%BE%E6%A1%B6%402x.png") no-repeat;
+    background-size: 40rpx;
+}
+
+.cart-view .group-item .header{
+    width: 100%;
+    height: 94rpx;
+    line-height: 94rpx;
+    padding: 0 26rpx;
+    border-bottom: 1px solid #f4f4f4;
+}
+
+.cart-view .promotion .icon{
+    display: inline-block;
+    height: 24rpx;
+    width: 15rpx;
+}
+
+.cart-view .promotion{
+    margin-top: 25.5rpx;
+    float: left;
+    height: 43rpx;
+    width: 480rpx;
+    /*margin-right: 84rpx;*/
+    line-height: 43rpx;
+    font-size: 0;
+}
+
+.cart-view .promotion .tag{
+    border: 1px solid #f48f18;
+    height: 37rpx;
+    line-height: 31rpx;
+    padding: 0 9rpx;
+    margin-right: 10rpx;
+    color: #f48f18;
+    font-size: 24.5rpx;
+}
+
+.cart-view .promotion .txt{
+    height: 43rpx;
+    line-height: 43rpx;
+    padding-right: 10rpx;
+    color: #333;
+    font-size: 29rpx;
+    overflow: hidden;
+}
+
+.cart-view .get{
+    margin-top: 18rpx;
+    float: right;
+    height: 58rpx;
+    padding-left: 14rpx;
+    border-left: 1px solid #d9d9d9;
+    line-height: 58rpx;
+    font-size: 29rpx;
+    color: #333;
+}
+
+.cart-bottom{
+    position: fixed;
+    bottom:0;
+    left:0;
+    height: 100rpx;
+    width: 100%;
+    background: #fff;
+    display: flex;
+}
+
+.cart-bottom .checkbox{
+    height: 34rpx;
+    padding-left: 60rpx;
+    line-height: 34rpx;
+    margin: 33rpx 18rpx 33rpx 26rpx;
+    background: url("https://wechatyiyuan.oss-cn-hangzhou.aliyuncs.com/%E9%80%89%E4%B8%AD%E6%97%A0%402x.png") no-repeat;
+    background-size: 34rpx;
+    font-size: 29rpx;
+}
+
+.cart-bottom .checkbox.checked{
+    background: url("https://wechatyiyuan.oss-cn-hangzhou.aliyuncs.com/%E9%80%89%E4%B8%AD%402x.png") no-repeat;
+    background-size: 34rpx;
+}
+
+.cart-bottom .total{
+    height: 34rpx;
+    flex: 1;
+    margin: 10rpx 10rpx;
+    font-size: 29rpx;
+}
+
+.cart-bottom .total .totalprice{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.cart-bottom .total .tprice {
+    font-family: STXihei;
+    font-size: 36rpx;
+}
+.cart-bottom .total .heji {
+    font-family: STXihei;
+    font-size: 24rpx;
+    margin-top: 6rpx;
+}
+
+.cart-bottom .total .yunfei{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.cart-bottom .delete{
+    height: 34rpx;
+    width: auto;
+    margin: 33rpx 18rpx;
+    font-size: 29rpx;
+}
+
+.cart-bottom .checkout{
+    height: 100rpx;
+    width: 210rpx;
+    text-align: center;
+    line-height: 100rpx;
+    font-size: 29rpx;
+}
